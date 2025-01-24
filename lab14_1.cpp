@@ -3,7 +3,24 @@ using namespace std;
 
 template <typename T>
 void insertionSort(T d[],int N){
+	for (int i = 1; i < N; i++)
+	{
+		int j=i;
+		while (d[j]>d[j-1]&&j>0)
+		{
+			T temp=d[j];
+			d[j]=d[j-1];
+			d[j-1]=temp;
+			j-=1;
+			continue;
+		}
+		
 
+		cout<<"Pass "<<i<<":";
+		for(int n = 0; n < 10; n++) cout << d[n] << " ";
+		cout<<endl;
+	}
+	
 }
 
 int main(){
